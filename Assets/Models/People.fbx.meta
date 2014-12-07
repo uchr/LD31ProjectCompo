@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: 2f5eb2c023afba94c94e5cd2e3379411
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Arm IK L
+    100002: Arm IK R
+    100004: Chest
+    100006: Contol
+    100008: Elbow L
+    100010: Elbow R
+    100012: Foot L
+    100014: Foot R
+    100016: Head
+    100018: Knee L
+    100020: Knee R
+    100022: Leg IK L
+    100024: Leg IK R
+    100026: Lower Arm L
+    100028: Lower Arm R
+    100030: Lower Leg L
+    100032: Lower Leg R
+    100034: People
+    100036: //RootNode
+    100038: PeopleModel
+    100040: Stomach
+    100042: Upper Arm L
+    100044: Upper Arm R
+    100046: Upper Leg L
+    100048: Upper Leg R
+    400000: Arm IK L
+    400002: Arm IK R
+    400004: Chest
+    400006: Contol
+    400008: Elbow L
+    400010: Elbow R
+    400012: Foot L
+    400014: Foot R
+    400016: Head
+    400018: Knee L
+    400020: Knee R
+    400022: Leg IK L
+    400024: Leg IK R
+    400026: Lower Arm L
+    400028: Lower Arm R
+    400030: Lower Leg L
+    400032: Lower Leg R
+    400034: People
+    400036: //RootNode
+    400038: PeopleModel
+    400040: Stomach
+    400042: Upper Arm L
+    400044: Upper Arm R
+    400046: Upper Leg L
+    400048: Upper Leg R
+    4300000: PeopleModel
+    7400000: Idle
+    7400002: Move
+    9500000: //RootNode
+    13700000: PeopleModel
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: People|PeopleAction
+      firstFrame: 0
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: People
+        weight: 1
+      - path: People/Contol
+        weight: 1
+      - path: People/Contol/Arm IK L
+        weight: 1
+      - path: People/Contol/Arm IK R
+        weight: 1
+      - path: People/Contol/Elbow L
+        weight: 1
+      - path: People/Contol/Elbow R
+        weight: 1
+      - path: People/Contol/Knee L
+        weight: 1
+      - path: People/Contol/Knee R
+        weight: 1
+      - path: People/Contol/Leg IK L
+        weight: 1
+      - path: People/Contol/Leg IK L/Foot L
+        weight: 1
+      - path: People/Contol/Leg IK R
+        weight: 1
+      - path: People/Contol/Leg IK R/Foot R
+        weight: 1
+      - path: People/Contol/Stomach
+        weight: 1
+      - path: People/Contol/Stomach/Chest
+        weight: 1
+      - path: People/Contol/Stomach/Chest/Head
+        weight: 1
+      - path: People/Contol/Stomach/Upper Arm L
+        weight: 1
+      - path: People/Contol/Stomach/Upper Arm L/Lower Arm L
+        weight: 1
+      - path: People/Contol/Stomach/Upper Arm R
+        weight: 1
+      - path: People/Contol/Stomach/Upper Arm R/Lower Arm R
+        weight: 1
+      - path: People/Contol/Stomach/Upper Leg L
+        weight: 1
+      - path: People/Contol/Stomach/Upper Leg L/Lower Leg L
+        weight: 1
+      - path: People/Contol/Stomach/Upper Leg R
+        weight: 1
+      - path: People/Contol/Stomach/Upper Leg R/Lower Leg R
+        weight: 1
+      - path: PeopleModel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Move
+      takeName: People|PeopleAction
+      firstFrame: 55
+      lastFrame: 89
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: People
+        weight: 1
+      - path: People/Contol
+        weight: 1
+      - path: People/Contol/Arm IK L
+        weight: 1
+      - path: People/Contol/Arm IK R
+        weight: 1
+      - path: People/Contol/Elbow L
+        weight: 1
+      - path: People/Contol/Elbow R
+        weight: 1
+      - path: People/Contol/Knee L
+        weight: 1
+      - path: People/Contol/Knee R
+        weight: 1
+      - path: People/Contol/Leg IK L
+        weight: 1
+      - path: People/Contol/Leg IK L/Foot L
+        weight: 1
+      - path: People/Contol/Leg IK R
+        weight: 1
+      - path: People/Contol/Leg IK R/Foot R
+        weight: 1
+      - path: People/Contol/Stomach
+        weight: 1
+      - path: People/Contol/Stomach/Chest
+        weight: 1
+      - path: People/Contol/Stomach/Chest/Head
+        weight: 1
+      - path: People/Contol/Stomach/Upper Arm L
+        weight: 1
+      - path: People/Contol/Stomach/Upper Arm L/Lower Arm L
+        weight: 1
+      - path: People/Contol/Stomach/Upper Arm R
+        weight: 1
+      - path: People/Contol/Stomach/Upper Arm R/Lower Arm R
+        weight: 1
+      - path: People/Contol/Stomach/Upper Leg L
+        weight: 1
+      - path: People/Contol/Stomach/Upper Leg L/Lower Leg L
+        weight: 1
+      - path: People/Contol/Stomach/Upper Leg R
+        weight: 1
+      - path: People/Contol/Stomach/Upper Leg R/Lower Leg R
+        weight: 1
+      - path: PeopleModel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
