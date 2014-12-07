@@ -27,26 +27,26 @@ public class MainQuest : MonoBehaviour {
 	public float time = 10.0f;
 	private float timer;
 
-	public void ShowMessage() {
+	public void ShowMessage(int fromStage) {
 		dialogBox.SetActive(true);
-		textDialog.text = GetMessage();
+		textDialog.text = GetMessage(fromStage);
 		timer = time;
 	}
 
-	public string GetMessage() {
-		if (stage == 0) {
+	public string GetMessage(int fromStage) {
+		if (fromStage == 0) {
 			return message[0];
 		}
-		if (1 <= stage && stage <= 5) {
+		if (1 <= fromStage && fromStage <= 5) {
 			return message[1];
 		}
-		if (6 <= stage && stage <= 8) {
+		if (6 <= fromStage && fromStage <= 8) {
 			return message[2];
 		}
-		if (9 <= stage && stage <= 13) {
+		if (9 <= fromStage && fromStage <= 13) {
 			return message[3];
 		}
-		if (stage == 14) {
+		if (fromStage == 14) {
 			return message[4];
 		}
 		return "";
@@ -54,11 +54,16 @@ public class MainQuest : MonoBehaviour {
 
 	//curPart = parts[stage].GetComponent<PartOfQuest>();
 	public void NextStage(int fromStage) {
-		parts[fromStage].SetActive(false);
-		if (stage == 0 || stage == 1 || stage == 6 || stage == 9 || stage == 14)
-			ShowMessage();
+		if (fromStage == 4 || fromStage == 5 || fromStage == 8 || fromStage == 12 || fromStage == 13)
+			parts[fromStage].GetComponent<Gun>().Fire();
+		if (fromStage == 0 || fromStage == 1 || fromStage == 6 || fromStage == 9 || fromStage == 14)
+			ShowMessage(fromStage);
 
-		++stage;
+		// Debug.Log("SetActive false to " + fromStage);
+		parts[fromStage].SetActive(false);
+		stage = fromStage + 1;
+		if (fromStage == 14)
+			return;
 		parts[stage].SetActive(true);
 	}
 
@@ -70,8 +75,8 @@ public class MainQuest : MonoBehaviour {
 
 	private void Update () {
 		if (Input.GetButtonDown("Jump"))
-			ShowMessage();
-			
+			ShowMessage(stage - 1);
+
 		if (timer >= 0.0f) {
 			timer -= Time.deltaTime;
 		}

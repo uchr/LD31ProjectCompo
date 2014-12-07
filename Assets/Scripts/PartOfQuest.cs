@@ -8,6 +8,7 @@ public class PartOfQuest : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other) {
 		MainQuest.instance.NextStage(stage);
+		collider.gameObject.SetActive(false);
     }
 
 	private void OnDrawGizmos() {
