@@ -3,28 +3,29 @@ guid: 534359a2fdd45144abacc4842fa0f560
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Bone
-    100002: Bone.001
-    100004: Bone.002
-    100006: Bone.004
-    100008: Bone.007
-    100010: Control
-    100012: Down
-    100014: //RootNode
-    100016: Tentacle
-    100018: TentacleModel
-    400000: Bone
-    400002: Bone.001
-    400004: Bone.002
-    400006: Bone.004
-    400008: Bone.007
-    400010: Control
-    400012: Down
-    400014: //RootNode
-    400016: Tentacle
-    400018: TentacleModel
+    100000: Bone.002
+    100002: Bone.003
+    100004: Bone.004
+    100006: Bone.005
+    100008: Contol
+    100010: End
+    100012: //RootNode
+    100014: Tentacle
+    100016: TentacleModel
+    100018: Up
+    400000: Bone.002
+    400002: Bone.003
+    400004: Bone.004
+    400006: Bone.005
+    400008: Contol
+    400010: End
+    400012: //RootNode
+    400014: Tentacle
+    400016: TentacleModel
+    400018: Up
     4300000: TentacleModel
-    7400000: Tentacle|TentacleAction
+    7400000: Beat
+    7400002: Dead
     9500000: //RootNode
     13700000: TentacleModel
   materials:
@@ -42,11 +43,103 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Beat
+      takeName: Tentacle|TentacleAction.001
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Tentacle
+        weight: 1
+      - path: Tentacle/Contol
+        weight: 1
+      - path: Tentacle/Contol/Bone.002
+        weight: 1
+      - path: Tentacle/Contol/Bone.002/Bone.003
+        weight: 1
+      - path: Tentacle/Contol/Bone.002/Bone.003/Bone.004
+        weight: 1
+      - path: Tentacle/Contol/Bone.002/Bone.003/Bone.004/Bone.005
+        weight: 1
+      - path: Tentacle/Contol/End
+        weight: 1
+      - path: Tentacle/Contol/Up
+        weight: 1
+      - path: TentacleModel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dead
+      takeName: Tentacle|TentacleAction.001
+      firstFrame: 50
+      lastFrame: 74
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Tentacle
+        weight: 1
+      - path: Tentacle/Contol
+        weight: 1
+      - path: Tentacle/Contol/Bone.002
+        weight: 1
+      - path: Tentacle/Contol/Bone.002/Bone.003
+        weight: 1
+      - path: Tentacle/Contol/Bone.002/Bone.003/Bone.004
+        weight: 1
+      - path: Tentacle/Contol/Bone.002/Bone.003/Bone.004/Bone.005
+        weight: 1
+      - path: Tentacle/Contol/End
+        weight: 1
+      - path: Tentacle/Contol/Up
+        weight: 1
+      - path: TentacleModel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -60,9 +153,9 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 0
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
