@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PartOfQuest : MonoBehaviour {
 
-	public Transform collider = null;
+	public Transform collider;
 	public int stage = 0;
 
 	private void OnTriggerEnter(Collider other) {
