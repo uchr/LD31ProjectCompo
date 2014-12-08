@@ -7,17 +7,24 @@ public class MainQuest : MonoBehaviour {
 
 	private PartOfQuest curPart;
 
+	public PlayerMovement playerMovement;
+
 	public bool isWin = false;
 	public bool isLose = false;
 
 	public GameObject dialogBox;
 	public Text textDialog;
 	private string [] message = new string[]{
-					"Hi, I am very scared. And I really need your help… I was running away from them… But along the way I lost my medallion. It is my last chance to stay alive.. But I sprained my leg… Help me to find my medallion. Please. I was running from that side of the island…",
-					"You really think that I will tell you something about it? But I might give you some information, if you bring me food, bottle of rum and gunpowder. And you will shoot from the gun.",
-					"Why should I help you? I’m not sure that I want to help you. But you can try. Bring me the core of the First Kraken. And I will think about your situation.",
-					"Yeah, I have heard about it. And I will glad to help you. However, can you help me, too? Could you bring me the letter from the Second Man?",
-					"You are in a very unpleasant situation, man. If I were you, I would escape from this island as soon as possible! Very strange things are happening here! Leave! Save your life!"
+"Hi, I am very scared. And I really need your help… I was running away from them… But along the way I lost my medallion. It is my last chance to stay alive.. But I sprained my leg… Help me to find my medallion. Please. I was running from that side of the island…",
+"You really think that I will tell you something about it? But I might give you some information, if you bring me food, bottle of rum and gunpowder. And you will shoot from the gun.",
+"Why should I help you? I’m not sure that I want to help you. But you can try. Bring me the core of the First Kraken. And I will think about your situation.",
+"Yeah, I have heard about it. And I will glad to help you. However, can you help me, too? Could you bring me the letter from the Second Man?",
+"You are in a very unpleasant situation, man. If I were you, I would escape from this island as soon as possible! Very strange things are happening here! Leave! Save your life!",
+@"You have died of tentacles.
+Press SPACE to restart.",
+@"You won and possible post-compo you go to another island. But now, unfortunately this is the end. Thank you to play my game.
+Special thanks to UncleBob, menesetsu, Sergey Ikonnikov, Anya Shmykova, CruelMotivator, Anton Nikolaev.
+Press SPACE to restart."
 				};
 
 	public GameObject [] parts;
@@ -49,6 +56,12 @@ public class MainQuest : MonoBehaviour {
 		if (fromStage == 14) {
 			return message[4];
 		}
+		if (isLose) {
+			return message[5];
+		}
+		if (isWin) {
+			return message[6];
+		}
 		return "";
 	}
 
@@ -62,8 +75,10 @@ public class MainQuest : MonoBehaviour {
 		// Debug.Log("SetActive false to " + fromStage);
 		parts[fromStage].SetActive(false);
 		stage = fromStage + 1;
-		if (fromStage == 14)
+		if (fromStage == 14) {
+			isWin = true;
 			return;
+		}
 		parts[stage].SetActive(true);
 	}
 
@@ -74,6 +89,23 @@ public class MainQuest : MonoBehaviour {
 	}
 
 	private void Update () {
+		if (isLose) {
+			playerMovement.enabled = false;
+			ShowMessage(15);
+			if (Input.GetButtonDown("Jump"))
+				Application.LoadLevel(0);
+		}
+
+		if (isWin) {
+			playerMovement.enabled = false;
+			ShowMessage(15);
+			if (Input.GetButtonDown("Jump"))
+				Application.LoadLevel(0);
+		}
+
+		if (isWin || isLose)
+			return;
+
 		if (Input.GetButtonDown("Jump"))
 			ShowMessage(stage - 1);
 

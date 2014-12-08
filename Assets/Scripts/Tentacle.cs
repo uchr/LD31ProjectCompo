@@ -10,6 +10,7 @@ public class Tentacle : MonoBehaviour {
 	private void Update () {
 		if (isDead) {
 			tentacleAnimator.SetBool("Dead", isDead);
+			boxCollider.enabled = false;
 			this.enabled = false;
 		}
 	}
