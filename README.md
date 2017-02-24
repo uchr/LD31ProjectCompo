@@ -1,5 +1,5 @@
 #Attention! Programmer art!
-Very small adventure, created by 48 hours for LudumDare 31.
+Very small adventure, made in 48 hours for LudumDare 31.
 Horrible art. Horrible code. Exist here for history.
 
 >Awesome story! - Comment from a participant Ludum Dare
