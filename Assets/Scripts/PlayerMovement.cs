@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour {
 		Vector3 direct = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
 		if (direct.magnitude > 0.5f)
 			cachedInner.right = direct.normalized;
-		rigidbody.velocity = Vector3.zero;
+		GetComponent<Rigidbody>().velocity = Vector3.zero;
 		playerAnimator.SetFloat("Velocity", direct.magnitude);
 		if (direct.magnitude != 0.0f)
 			cachedTransform.position += direct * Time.deltaTime * speed;
